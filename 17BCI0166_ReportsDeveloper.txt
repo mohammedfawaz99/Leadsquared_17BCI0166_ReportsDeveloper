@@ -1,0 +1,46 @@
+1.
+SELECT DEPARTMENT, COUNT(*)
+FROM Employee
+GROUP DEPARTMENT;
+
+2.
+SELECT *
+FROM Employee
+WHERE
+DEPARTMENT IN
+(
+SELECT MAX(MANAGER)
+FROM Employee
+GROUP BY DEPARTMENT
+)
+
+3.
+SELECT EMPLOYEE_REF_ID, SUM(INCENTIVE_AMOUNT)
+FROM Employees
+GROUP BY EMPLOYEE_REF_ID;
+
+4.
+SELECT MONTH(INCENTIVE_DATE), SUM (INCENTIVE_AMOUNT)
+FROM Employees
+WHERE MAX(SUM(INCENTIVE_AMOUNT))
+
+5.
+Let's take Hourglass A with capacity of 4 minutes and Hourglass B with capacity of 7 minutes.
+- Start A and B
+- At 4 minutes, A runs out. B has 3 minutes left. Flip A.
+- At 7 minutes, B runs out. A has 1 minute left. Flip B.
+- At 8 minutes, A runs out. B has 1 minutes elapsed and 6 minutes left. Flip B. Now, B has 1 minute left.
+- B will run out at 9 minutes.
+
+6.
+Possibilities:
+Girl, Girl
+Girl, Boy
+Boy, Girl
+
+Probability (Girl, Girl): 1/3
+
+7.
+In this given statement, the radio host is intentionally being vague about whether there were other quality improvements or changes made at Ron's Cafe that resulted in the increase in sales.
+ The 10% increase can be a result of an overhaul in the production process, quality of ingredients used, change in staff, or any number of factors.
+ The radio host has issued the statement in a way that does not cast light about this. A better way for the radio host to advertise their services would be to also mention that there were no external factors that changed during the period Ron's Cafe was advertising, and thus, the increase in sales was a direct result of their choice in investing in local radio station advertising services. 
